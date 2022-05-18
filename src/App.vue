@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import ToDoApp from "./components/ToDoApp.vue";
+import Nav from "./components/Nav.vue";
 
 </script>
 
 <template>
-  <ToDoApp />
+  <!-- <ToDoApp /> -->
+  <Nav />
 </template>
 
 <style>
