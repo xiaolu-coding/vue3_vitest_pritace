@@ -24,6 +24,14 @@ describe('测试ToDoApp组件', () => {
 
     expect(wrapper.findAll('[data-test="todo"]')).toHaveLength(2)
   })
+
+  it('测试完成待办事项', async () => {
+    const wrapper = mount(ToDoApp)
+    // 对checkbox进行交互
+    await wrapper.get('[data-test="todo-checkbox"]').setValue(true)
+    
+    expect(wrapper.get('[data-test="todo"]').classes()).toContain('completed')
+  })
 })
 
 
